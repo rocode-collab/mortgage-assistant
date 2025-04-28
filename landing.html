@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Assistant - Get Started</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
+        fbq('track', 'PageView');
+        
+        // Enable advanced matching for better tracking
+        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID', {
+            external_id: 'user_id', // Replace with actual user ID if available
+            em: 'hashed_email', // Replace with hashed email if available
+            ph: 'hashed_phone', // Replace with hashed phone if available
+            fn: 'hashed_first_name', // Replace with hashed first name if available
+            ln: 'hashed_last_name' // Replace with hashed last name if available
+        });
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <!-- TikTok Pixel Code -->
+    <script>
+        !function (w, d, t) {
+            w[t] = w[t] || [];
+            w[t].push({
+                'ttq.load':'YOUR_TIKTOK_PIXEL_ID',
+                'ttq.track':'PageView',
+                'ttq.trackCustom': 'LandingPageView'
+            });
+            var s = d.createElement('script');
+            s.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=YOUR_TIKTOK_PIXEL_ID';
+            s.async = true;
+            d.head.appendChild(s);
+        }(window, document, 'ttq');
+    </script>
+    <!-- End TikTok Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .landing-container {
+            max-width: 600px;
+            width: 90%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #4a90e2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .logo i {
+            font-size: 40px;
+            color: white;
+        }
+
+        h1 {
+            color: #1c1e21;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        p {
+            color: #65676b;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .cta-button:hover {
+            background: #357abd;
+        }
+
+        .social-proof {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e4e6eb;
+        }
+
+        .social-proof p {
+            font-size: 14px;
+            color: #65676b;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: #65676b;
+            font-size: 24px;
+            transition: color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #4a90e2;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <div class="logo">
+            <i class="fas fa-home"></i>
+        </div>
+        <h1>Welcome to Your Mortgage Journey!</h1>
+        <p>Hi there! I'm your friendly mortgage assistant. I'm here to help guide you through the home buying process and answer any questions you might have.</p>
+        <p>Let's start with a quick Home Readiness Check to see how I can best assist you!</p>
+        <a href="index.html" class="cta-button" onclick="trackStartChat()">Start Chat Now</a>
+        <div class="social-proof">
+            <p>Join thousands of happy home buyers who've found their dream home with our help!</p>
+            <div class="social-icons">
+                <a href="#" title="Facebook" onclick="trackSocialClick('facebook')"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="Instagram" onclick="trackSocialClick('instagram')"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="TikTok" onclick="trackSocialClick('tiktok')"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="tracking.js"></script>
+    <script>
+        // Track when user starts the chat
+        function trackStartChat() {
+            if (window.trackStartChat) {
+                window.trackStartChat();
+            } else if (window.trackChatInteraction) {
+                window.trackChatInteraction('start_chat');
+            }
+            
+            // Also track with Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'StartChat', {
+                    content_name: 'Mortgage Assistant',
+                    content_category: 'Financial Services'
+                });
+            }
+            
+            // And with TikTok Pixel
+            if (typeof ttq !== 'undefined') {
+                ttq.track('StartChat', {
+                    content_name: 'Mortgage Assistant',
+                    content_category: 'Financial Services'
+                });
+            }
+        }
+        
+        // Track social media clicks
+        function trackSocialClick(platform) {
+            if (window.trackChatInteraction) {
+                window.trackChatInteraction(`share_${platform}`);
+            }
+            
+            // Track with Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Share', {
+                    content_name: 'Mortgage Assistant',
+                    content_category: 'Financial Services',
+                    method: platform
+                });
+            }
+            
+            // Track with TikTok Pixel
+            if (typeof ttq !== 'undefined') {
+                ttq.track('Share', {
+                    content_name: 'Mortgage Assistant',
+                    content_category: 'Financial Services',
+                    method: platform
+                });
+            }
+        }
+        
+        // Track when user views the landing page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track with Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: 'Mortgage Assistant Landing',
+                    content_category: 'Financial Services'
+                });
+            }
+            
+            // Track with TikTok Pixel
+            if (typeof ttq !== 'undefined') {
+                ttq.track('ViewContent', {
+                    content_name: 'Mortgage Assistant Landing',
+                    content_category: 'Financial Services'
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

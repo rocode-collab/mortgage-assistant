@@ -1,0 +1,18 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# API keys and secrets
+config.js
+secrets.js
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db 

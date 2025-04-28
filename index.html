@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Assistant Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Mortgage Assistant</h1>
+            <p>Your friendly guide to home buying</p>
+            <div class="social-share">
+                <button id="share-facebook" class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                <button id="share-instagram" class="social-btn instagram"><i class="fab fa-instagram"></i></button>
+                <button id="share-tiktok" class="social-btn tiktok"><i class="fab fa-tiktok"></i></button>
+            </div>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
