@@ -1,0 +1,4 @@
+// Example configuration file - Rename to config.js and add your API key
+const CONFIG = {
+    OPENAI_API_KEY: 'your-api-key-here' // Replace with your actual OpenAI API key
+}; 
